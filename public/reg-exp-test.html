@@ -1,0 +1,19 @@
+    <!doctype html>
+    <html ng-app="parser">
+    <head>
+    </head>
+    <body>
+    <div id="parserDiv" ng-controller="ParserCtrl"><form>
+        <label>Pattern:</label>
+        <input type="text" ng-model="model.pattern" ng-trim="false" placeholder="Enter a regular expression pattern here" />
+        <button ng-click="update()">Click to parse</button>
+        <hr />
+        <div>{{model.parsedPattern}}</div>
+        <div ng-bind-html-unsafe="model.visualPattern"/>
+    </form>
+    </div>
+    <script src="javascripts/angular.js"></script>
+    <script src="javascripts/angular-sanitize.js"></script>
+    <script src="javascripts/reg-exp-test.js"></script>
+    </body>
+    </html>
