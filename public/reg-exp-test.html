@@ -9,7 +9,7 @@
         <button ng-click="update()">Click to parse</button>
         <hr />
         <div>{{model.parsedPattern}}</div>
-        <div ng-bind-html-unsafe="model.visualPattern"/>
+        <div ng-bind-html="model.visualPattern"/>
     </form>
     </div>
     <script src="javascripts/angular.js"></script>

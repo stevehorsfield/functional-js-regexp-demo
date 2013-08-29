@@ -1,4 +1,4 @@
-function ParserCtrl($scope, $http) {
+function ParserCtrl($scope, $http, $sce) {
 
     $scope.model = {
         pattern: "",
@@ -110,7 +110,7 @@ function ParserCtrl($scope, $http) {
             return result;
         }
         
-        return next(data);
+        return $sce.trustAsHtml(next(data));
     };
 
 }
