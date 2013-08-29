@@ -295,7 +295,7 @@ function parseFragment(pattern, context) {
     }
     function processEscapeSequence() {
         var temp = parseEscapeSequence(ps);
-        c.push(temp.character);
+        c.push(temp.token);
         return parseFragment(temp.input, context);
     }
     function processAlternation() {
@@ -373,4 +373,3 @@ function parselog(pattern) {
 // Exports
 
 exports.parse = parse;
-
