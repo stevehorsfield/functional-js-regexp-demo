@@ -6,6 +6,8 @@ Content based on http://stevehorsfield.files.wordpress.com/2009/08/regular-expre
 
 Licensed according to text here: http://creativecommons.org/licenses/by-nc-sa/3.0/deed.en_GB.
 
+This project contains third party code.  Refer to LICENSE and the THIRD_PARTY_LICENSES folder.
+
 
 About
 =====
