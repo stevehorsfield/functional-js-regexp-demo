@@ -18,6 +18,12 @@ var ParseTokenKinds = {
     literal: "literal"
     };
 
+var RangeModes = {
+    matching: "matching",
+    inverted: "inverted"
+};
+
+
 function ParseToken(tokenKind) {
     this.tokenKind = tokenKind;
 }
@@ -70,3 +76,4 @@ ParseToken.literal = function(character) {
 
 exports.ParseTokenKinds = ParseTokenKinds;
 exports.ParseToken = ParseToken;
+exports.RangeModes = RangeModes;

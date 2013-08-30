@@ -10,9 +10,9 @@ var hex4 = HexModule.hex4;
 var hex8 = HexModule.hex8;
 var hex16 = HexModule.hex16;
 var RangeToken = RangeTokenModule.RangeToken;
-var RangeModes = RangeTokenModule.RangeModes;
 var CharacterRangeKinds = RangeTokenModule.CharacterRangeKinds;
 var ParseTokenKinds = ParseTokenModle.ParseTokenKinds;
+var RangeModes = ParseTokenModle.RangeModes;
 var ParseToken = ParseTokenModle.ParseToken;
 
 // Module definition

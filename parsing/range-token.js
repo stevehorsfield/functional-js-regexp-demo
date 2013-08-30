@@ -9,11 +9,6 @@ var CharacterRangeKinds = {
     range: "range"
 };
 
-var RangeModes = {
-    matching: "matching",
-    inverted: "inverted"
-};
-
 function RangeToken(rangeKind) {
     this.rangeKind = rangeKind;
 }
@@ -36,5 +31,4 @@ RangeToken.range = function(characterFrom, characterTo) {
 // Exports
 
 exports.CharacterRangeKinds = CharacterRangeKinds;
-exports.RangeModes = RangeModes;
 exports.RangeToken = RangeToken;
