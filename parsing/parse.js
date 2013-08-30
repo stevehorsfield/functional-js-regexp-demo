@@ -1,7 +1,6 @@
 // Dependencies
 
 var HexModule = require("../util/hex.js");
-var TextModule = require("../util/text.js");
 var RangeTokenModule = require("./range-token.js");
 var ParseTokenModle = require("./parse-token.js");
 
@@ -10,7 +9,6 @@ var ParseTokenModle = require("./parse-token.js");
 var hex4 = HexModule.hex4;
 var hex8 = HexModule.hex8;
 var hex16 = HexModule.hex16;
-var unicodeChar = TextModule.unicodeChar;
 var RangeToken = RangeTokenModule.RangeToken;
 var RangeModes = RangeTokenModule.RangeModes;
 var CharacterRangeKinds = RangeTokenModule.CharacterRangeKinds;
@@ -54,12 +52,12 @@ function parseEscapeSequence(input) {
         case 0: break;
         case 1: 
             char1 = input.charAt(1), char2 = input.charAt(2);
-            char0 = unicodeChar(hex8(char1, char2));
+            char0 = String.fromCharCode(hex8(char1, char2));
             result.input = input.slice(3);
             break;
         case 2:
             char1 = input.charAt(1), char2 = input.charAt(2), char3 = input.charAt(3), char4 = input.charAt(4);
-            char0 = unicodeChar(hex16(char1, char2, char3, char4));
+            char0 = String.fromCharCode(hex16(char1, char2, char3, char4));
             result.input = input.slice(5);
             break;
         default:
@@ -97,12 +95,12 @@ function parseRangeEscapeSequence(input) {
         case 0: break;
         case 1: 
             char1 = input.charAt(1), char2 = input.charAt(2);
-            char0 = unicodeChar(hex8(char1, char2));
+            char0 = String.fromCharCode(hex8(char1, char2));
             result.input = input.slice(3);
             break;
         case 2:
             char1 = input.charAt(1), char2 = input.charAt(2), char3 = input.charAt(3), char4 = input.charAt(4);
-            char0 = unicodeChar(hex16(char1, char2, char3, char4));
+            char0 = String.fromCharCode(hex16(char1, char2, char3, char4));
             result.input = input.slice(5);
             break;
         default:
