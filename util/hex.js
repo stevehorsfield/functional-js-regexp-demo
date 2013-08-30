@@ -22,11 +22,11 @@ function hex4(char) {
 }
 
 function hex8(charMSD, charLSD) {
-    return (16 * HexModule.hex4(charMSD)) + HexModule.hex4(charLSD);
+    return (16 * hex4(charMSD)) + hex4(charLSD);
 }
 
 function hex16(charMSD, char2, char3, charLSD) {
-    return (256 * HexModule.hex8(charMSD, char2)) + HexModule.hex8(char3, charLSD);
+    return (256 * hex8(charMSD, char2)) + hex8(char3, charLSD);
 }
 
 exports.hex4 = hex4;
