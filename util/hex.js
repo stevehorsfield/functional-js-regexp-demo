@@ -18,7 +18,7 @@ function hex4(char) {
     case 'E': return 14;
     case 'F': return 15;
     }
-    return undefined;
+    throw "invalid hexadecimal digit";
 }
 
 function hex8(charMSD, charLSD) {
