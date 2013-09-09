@@ -4,8 +4,7 @@ function ParserCtrl($scope, $http, $sce) {
         pattern: "",
         parsedPattern: "Not yet parsed",
         visualPattern: "",
-        active: false,
-        testValue: "Test value"
+        active: false
     };
     
     $scope.update = function() {
